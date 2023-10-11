@@ -11,11 +11,9 @@ import java.util.Map;
 @RestController
 public class UserController {
     private RegistrationServiceClient registrationServiceClient;
-    //private final AcknowledgeService acknowledgeService;
 
     @Autowired
-    public UserController(/*AcknowledgeService,*/ RegistrationServiceClient registrationServiceClient){
-        //this.acknowledgeService = acknowledgeService;
+    public UserController(RegistrationServiceClient registrationServiceClient){
         this.registrationServiceClient = registrationServiceClient;
     }
 
