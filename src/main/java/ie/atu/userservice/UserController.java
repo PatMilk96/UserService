@@ -19,9 +19,9 @@ public class UserController {
         this.registrationServiceClient = registrationServiceClient;
     }
 
-    @PostMapping("confirm-and-register")
+    @PostMapping("/confirm-and-register")
     public Map<String, String> confirmAndRegister(@RequestBody UserDetails userDetails){
-        String confirm = userDetails.getEmail();
+        String confirm = registrationServiceClient.details(userDetails);
         Map<String, String> responseMessage = new HashMap<>();
         responseMessage.put("Welcome, ", confirm);
         return responseMessage;
