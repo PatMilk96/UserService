@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class AcknowledgeService {
     public String ackMessage(UserDetails user){
-        String message = "Thank you" +user.getName() + "your request has been received";
+        String message = "Thank you " +user.getName() + " your request has been received";
         return message;
     }
 }
