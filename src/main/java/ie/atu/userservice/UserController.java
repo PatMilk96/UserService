@@ -21,7 +21,6 @@ public class UserController {
 
     @PostMapping("/confirm-and-register")
     public String confirmAndRegister(@RequestBody UserDetails userDetails){
-        String confirm = registrationServiceClient.details(userDetails);
-        return (confirm + ",\n" + acknowledgeService.ackMessage(userDetails));
+        return registrationServiceClient.details(userDetails);
     }
 }
